@@ -1,0 +1,83 @@
+.b-settings {
+  padding: 30px 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.b-settings__field {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.b-settings__label {
+  color: rgba(#fff, 0.5);
+  min-width: 100px;
+  text-align: left;
+}
+
+.b-settings__control {
+  flex-grow: 1;
+  padding: 7px 10px;
+}
+
+.b-settings__warning {
+  color: #ef8b6b;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.9em;
+  position: relative;
+  top: -1px;
+}
+
+.b-settings__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.b-settings__button {
+  transition: background 200ms, color 200ms;
+  margin: 0;
+  color: rgba(#fff, 0.7);
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px 17px;
+  border: 1px solid rgba(#fff, 0.25);
+  text-align: center;
+  border-radius: 90px;
+  margin-right: -1px;
+  margin: 0 7px;
+
+  &:active {
+    background: rgba(#000, 0.09) !important;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: rgba(#fff, 0.09);
+    color: #fff;
+  }
+}
+
+@include device-until(mobile) {
+  .b-settings {
+    padding: 25 10px;
+  }
+
+  .b-settings__button {
+    padding: 5px 15px;
+  }
+
+  .b-settings__control {
+    padding: 5px;
+  }
+}
